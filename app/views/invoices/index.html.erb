@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Invoices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Amount</th>
+      <th>Company</th>
+      <th>Contragent</th>
+      <th>Currency</th>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @invoices.each do |invoice| %>
+      <tr>
+        <td><%= invoice.amount %></td>
+        <td><%= invoice.company %></td>
+        <td><%= invoice.contragent %></td>
+        <td><%= invoice.currency %></td>
+        <td><%= invoice.date %></td>
+        <td><%= link_to 'Show', invoice %></td>
+        <td><%= link_to 'Edit', edit_invoice_path(invoice) %></td>
+        <td><%= link_to 'Destroy', invoice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Invoice', new_invoice_path %>

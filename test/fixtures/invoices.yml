@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amount: 9.99
+  company: MyString
+  contragent: MyString
+  currency: MyString
+  date: 2015-10-13
+
+two:
+  amount: 9.99
+  company: MyString
+  contragent: MyString
+  currency: MyString
+  date: 2015-10-13
