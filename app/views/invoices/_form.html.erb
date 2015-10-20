@@ -1,37 +1,67 @@
-<%= form_for(@invoice) do |f| %>
-  <% if @invoice.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@invoice.errors.count, "error") %> prohibited this invoice from being saved:</h2>
-
-      <ul>
-      <% @invoice.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<div class="col-xs-12">
+<%= simple_form_for(@invoice) do |f| %>
+  <div id="invoice-wrap">
+    <%= f.error_notification %>
+    <div class="row">
+      <div class="col-xs-12">
+        <h3 class="page-header">INVOICE</h3>
+      </div><!-- /.col -->
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :amount %><br>
-    <%= f.text_field :amount %>
+    <div class="row invoice-info">
+      <div class="col-xs-4 invoice-col">
+        From
+        <address>
+          <%= f.input_field :company, class: "form-control" %>
+          <input class="form-control"   placeholder="address line 1" />
+          <input class="form-control"   placeholder="address line 2" />
+          <input class="form-control"   placeholder="phone number" />
+        </address>
+      </div><!-- /.col -->
+      <div class="col-xs-4 invoice-col">
+        To
+        <address>
+          <%= f.input_field :contragent, class: "form-control"  %>
+          <input class="form-control" placeholder="address line 1" />
+          <input class="form-control" placeholder="address line 2" />
+          <input class="form-control" placeholder="phone number" />
+        </address>
+      </div><!-- /.col -->
+      <div class="col-xs-4 invoice-col">
+        <form class="form-horizontal">
+
+          <div class="form-group">
+            <div class="col-xs-4"><label>Invoice #</label></div>
+            <div class="col-xs-8 invoice_num"></div>
+          </div>
+          <div class="col-xs-12"></div>
+          <div class="form-group">
+            <div class="col-xs-4"><%= f.label :date, required: false %></div>
+            <div class="col-xs-8"><%= f.input_field :date, class: "form-control datepicker", as: :string %></div>
+          </div>
+
+          <div class="col-xs-12"></div>
+          <div class="form-group">
+            <div class="col-xs-4"><%= f.label :currency, required: false %></div>
+            <div class="col-xs-8"><%= f.input_field :currency, class: "form-control" %></div>
+          </div>
+
+
+          <div class="col-xs-12"></div>
+          <div class="form-group">
+            <div class="col-xs-4"><%= f.label :amount, required: false %></div>
+            <div class="col-xs-8"><%= f.input_field :amount, class: "form-control" %></div>
+          </div>
+        </form>
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+
+
+    <div class="row">
+      <div class="col-xs-12 pull-left">
+        <%= f.button :submit, 'Submit Payment', class: 'btn btn-warning' %>    
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :company %><br>
-    <%= f.text_field :company %>
-  </div>
-  <div class="field">
-    <%= f.label :contragent %><br>
-    <%= f.text_field :contragent %>
-  </div>
-  <div class="field">
-    <%= f.label :currency %><br>
-    <%= f.text_field :currency %>
-  </div>
-  <div class="field">
-    <%= f.label :date %><br>
-    <%= f.date_select :date %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+  <% end %>
+</div>

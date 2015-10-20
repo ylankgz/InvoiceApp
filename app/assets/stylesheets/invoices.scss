@@ -1,3 +1,64 @@
-// Place all the styles related to the Invoices controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.toolbar {
+	padding:20px 10px 10px 10px;
+	height: 50px;
+}
+
+#invoice-wrap {
+	position: relative;
+  	background: #fff;
+  	border: 1px solid #f4f4f4;
+  	padding: 20px;
+  	margin: 10px 25px;
+	address input { width: 70%; margin-bottom:5px; float: left; text-align: left; }
+	.invoice_space {margin-top:20px}
+
+	.invoice-col {
+		label {padding-top: 8px;}
+		input {margin-bottom:3px;}
+		.invoice_num {
+			text-align: right;
+			height: 40px;
+			padding-top:6px;
+
+		}
+	}
+
+	#totals {
+		input { font-size: 12px; }
+	}
+
+	#items {
+		td.price_td, td.delete_td {
+			padding-top: 16px;
+		}
+
+		input { font-size: 12px; }
+
+		font-size: 12px;
+		
+	 	th.description { width: 40%; }
+	 	th.item-name { width: 15%; }
+	 	th.units { width: 15%; }
+	 	th.unit { width: 15%; }
+	 	th.quantity { width: 13%; }
+	}
+
+	#terms { 
+		text-align: center; margin: 20px 0 0 0; 
+
+		h5 { text-transform: uppercase; font-size: 13px; letter-spacing: 10px; border-bottom: 1px solid black; padding: 0 0 8px 0; margin: 0 0 8px 0; }
+		textarea { width: 100%; text-align: center;}
+	}
+
+	.delete { color: #FF3B30; font-size: 16px; }
+}
+.page-header {
+	  	margin: 10px 0 20px 0;
+	  	font-size: 22px;
+}
+.page-header > small {
+	color: #666;
+	display: block;
+	margin-top: 5px;
+	font-size: 12px;
+}
