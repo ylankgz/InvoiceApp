@@ -29,3 +29,15 @@ function bind1() {
 	$('.cost').blur(update_price);
 	$('.qty').blur(update_price);
 }
+
+function bind(main, modal) {
+	var n = main.val();
+	modal.empty();
+	modal.append(n);
+}
+
+function bind2(main, modal) {
+	var n = main.text();
+	modal.empty();
+	modal.append(" " + n);
+}

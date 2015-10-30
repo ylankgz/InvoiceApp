@@ -122,6 +122,7 @@
 
     <div class="row">
       <div class="col-xs-12 pull-left">
+        <a class="btn btn-info btn-sm" id="invoice_button" data-toggle="modal" data-target="#invoice_modal">Show Invoice</a>
         <%= f.button :submit, 'Submit Payment', class: 'btn btn-warning btn-sm', id: "submit_invoice" %>    
       </div>
     </div>
@@ -132,4 +133,17 @@
     </div>
   </div>
   <% end %>
+</div>
+
+<div class="modal fade" id="invoice_modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content" style="width:920px">
+      <div class="container-fluid invoice_wrapper" style="margin:10px" id="print-me">
+        <%= render 'invoice' %>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" onclick="printDiv('print-me')">Print</button>
+      </div>
+    </div>
+  </div>
 </div>

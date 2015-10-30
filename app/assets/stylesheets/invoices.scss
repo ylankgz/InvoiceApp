@@ -62,3 +62,13 @@
 	margin-top: 5px;
 	font-size: 12px;
 }
+
+.invoice_wrapper {
+	#modal_terms { 
+		text-align: center; margin: 100px 0 0 0; 
+		h5 { text-transform: uppercase; font-size: 13px; letter-spacing: 10px; border-bottom: 1px solid black; padding: 0 0 8px 0; margin: 0 0 8px 0; }
+		span { width: 100%; text-align: center;}
+	}
+	#items {font-size: 12px;}
+	#modal_invoice_number{font-size: 12px}
+}
