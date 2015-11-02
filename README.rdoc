@@ -8,4 +8,6 @@ Simple Invoices App built with Ruby on Rails and Jquery and deployed to AWS Elas
 * {Part 2}[https://youtu.be/7VMauQWFRxo]
 * {Part 3}[https://youtu.be/rWALua7YZE8]
 * {Part 4}[https://youtu.be/w0_7Vh4kaZ4]
+* {Part 5}[https://youtu.be/1BmyIDdPLs8]
+
 
