@@ -4,7 +4,13 @@ class InvoicesController < ApplicationController
   # GET /invoices
   # GET /invoices.json
   def index
-    @invoices = Invoice.all
+    @search = Invoice.search(params[:q])
+    @invoices = @search.result
+  end
+
+  def search
+    index
+    render :index
   end
 
   # GET /invoices/1

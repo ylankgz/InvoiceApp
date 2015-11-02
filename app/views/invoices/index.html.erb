@@ -4,7 +4,28 @@
   <div class="col-md-8 col-md-offset-2">
     <div class="panel panel-default">
       <div class="panel-heading">
-      <h3 class="panel-title">Invoices</h3>
+      <div class="container-fluid">
+        <div class="col-md-2">
+          <%= link_to 'New Invoice', new_invoice_path, class: "btn btn-primary" %>
+        </div>
+
+        <%= search_form_for @search, url: search_invoices_path, html: {class: "form-inline col-md-8 col-md-offset-1", method: :post} do |f| %>
+          <div class="input-daterange">
+            <div class="col-md-4">
+              <%= f.text_field :date_gteq, class: "form-control", placeholder: "Date >= to" %>
+            </div>
+            <div class="col-md-4 col-md-offset-1">
+              <%= f.text_field :date_lteq, class: "form-control", placeholder: "Date <= to" %>
+            </div>
+          </div>
+
+          <div class="col-md-2 col-md-offset-1 form-actions">
+            <%= f.submit "Search", class: "btn btn-success" %>
+          </div>
+          
+        <% end %>
+      </div>
+
       </div>
 
       <div class="panel-body">
@@ -36,7 +57,7 @@
       </div>
 
       <div class="panel-footer">
-        <%= link_to 'New Invoice', new_invoice_path, class: "btn btn-primary" %>
+        
       </div>
     </div>
   </div> 

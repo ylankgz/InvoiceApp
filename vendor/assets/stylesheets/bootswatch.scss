@@ -1,196 +1,263 @@
-// Sandstone 3.3.5
+// Cosmo 3.3.5
 // Bootswatch
 // -----------------------------------------------------
 
-$web-font-path: "https://fonts.googleapis.com/css?family=Roboto:400,500" !default;
+$web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" !default;
 
 @import url($web-font-path);
 
 // Navbar =====================================================================
 
-.sandstone {
-  font-size: 11px;
-  line-height: 22px;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
 .navbar {
-  .nav > li > a {
-    @extend .sandstone;
-  }
 
-  &-form input,
-  &-form .form-control {
-    border: none;
+  &-inverse {
+
+    .badge {
+      background-color: #fff;
+      color: $brand-primary;
+    }
   }
 }
 
 // Buttons ====================================================================
 
-.btn {
-  border: none;
-  @extend .sandstone;
+// Typography =================================================================
 
-  &:hover {
-    border-color: transparent;
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+.text-primary,
+.text-primary:hover {
+  color: $brand-primary;
+}
+
+.text-success,
+.text-success:hover {
+  color: $brand-success;
+}
+
+.text-danger,
+.text-danger:hover {
+  color: $brand-danger;
+}
+
+.text-warning,
+.text-warning:hover {
+  color: $brand-warning;
+}
+
+.text-info,
+.text-info:hover {
+  color: $brand-info;
+}
+
+// Tables =====================================================================
+
+table,
+.table {
+
+  a:not(.btn) {
+    text-decoration: underline;
   }
 
-  &-lg {
-    line-height: 26px;
+  .dropdown-menu a {
+    text-decoration: none;
   }
 
-  &-default {
-    &:hover {
-      background-color: $navbar-default-link-active-bg;
+  .success,
+  .warning,
+  .danger,
+  .info {
+    color: #fff;
+
+    a {
+      color: #fff;
     }
   }
 }
 
-// Typography =================================================================
-
-// Tables =====================================================================
-
 // Forms ======================================================================
 
-input,
-.form-control {
-  @include box-shadow(none);
 
-  &:focus {
-    border-color: $input-border;
-    @include box-shadow(none);
+.has-warning {
+  .help-block,
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  &.radio label,
+  &.checkbox label,
+  &.radio-inline label,
+  &.checkbox-inline label,
+  .form-control-feedback {
+    color: $brand-warning;
+  }
+
+  .form-control,
+  .form-control:focus,
+  .input-group-addon {
+    border: 1px solid $brand-warning;
+  }
+}
+
+.has-error {
+  .help-block,
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  &.radio label,
+  &.checkbox label,
+  &.radio-inline label,
+  &.checkbox-inline label,
+  .form-control-feedback {
+    color: $brand-danger;
+  }
+
+  .form-control,
+  .form-control:focus,
+  .input-group-addon {
+    border: 1px solid $brand-danger;
+  }
+}
+
+.has-success {
+  .help-block,
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  &.radio label,
+  &.checkbox label,
+  &.radio-inline label,
+  &.checkbox-inline label,
+  .form-control-feedback {
+    color: $brand-success;
+  }
+
+  .form-control,
+  .form-control:focus,
+  .input-group-addon {
+    border: 1px solid $brand-success;
   }
 }
 
 // Navs =======================================================================
 
-.nav {
-  @extend .sandstone;
-
-  .open > a,
-  .open > a:hover,
-  .open > a:focus {
-    border-color: $gray-light;
-  }
-}
-
-.nav-tabs {
+.nav-pills {
 
   & > li > a {
-    background-color: $gray-lighter;
-    border-color: $nav-tabs-border-color;
-    color: $gray;
-  }
-
-  > li.disabled > a:hover {
-    background-color: $gray-lighter;
-  }
-}
-
-.nav-pills {
-  a {
-    color: $gray;
-  }
-
-  li > a {
-    border: 1px solid transparent;
-  }
-
-  li.active > a,
-  li > a:hover {
-    border-color: $gray-light;
-  }
-
-  li.disabled > a {
-    border-color: transparent;
-  }
-}
-
-.breadcrumb {
-  @extend .sandstone;
-
-  border: 1px solid $gray-light;
-
-  a {
-    color: $gray;
-  }
-}
-
-.pagination {
-  @extend .sandstone;
-}
-
-.pager {
-  @extend .sandstone;
-
-  li > a {
-    color: $gray;
+    border-radius: 0;
   }
 }
 
 .dropdown-menu {
-  & > li > a {
-    @extend .sandstone;
+
+  & > li > a:hover,
+  & > li > a:focus {
+    background-image: none;
   }
 }
 
 // Indicators =================================================================
 
-.alert {
+.close {
+  text-decoration: none;
+  text-shadow: none;
+  opacity: 0.4;
 
-  a,
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+.alert {
+  border: none;
+
   .alert-link {
+    text-decoration: underline;
     color: #fff;
   }
 }
 
-.tooltip {
-  @extend .sandstone;
+.label {
+  border-radius: 0;
 }
 
 // Progress bars ==============================================================
 
 .progress {
-  border-radius: 10px;
-  background-color: $gray-light;
+  height: 8px;
   @include box-shadow(none);
-
-  &-bar {
-    @include box-shadow(none);
+  .progress-bar {
+    font-size: 8px;
+    line-height: 8px;
   }
 }
 
 // Containers =================================================================
 
-.list-group {
-  &-item {
-    padding: 16px 24px;
-  }
-}
-
-.well {
-  @include box-shadow(none);
-}
-
 .panel {
-  @include box-shadow(none);
-
-  .panel-heading,
-  .panel-title {
-    @extend .sandstone;
-    color: #fff;
-  }
-
-  .panel-footer {
-    @extend .sandstone;
+  &-heading,
+  &-footer {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
   }
 
   &-default {
-    .panel-heading,
-    .panel-title,
-    .panel-footer {
-      color: $gray;
+    .close {
+      color: $text-color;
     }
   }
+}
+
+a.list-group-item {
+
+  &-success {
+    &.active {
+      background-color: $state-success-bg;
+    }
+
+    &.active:hover,
+    &.active:focus {
+      background-color: darken($state-success-bg, 5%);
+    }
+  }
+
+  &-warning {
+    &.active {
+      background-color: $state-warning-bg;
+    }
+    
+    &.active:hover,
+    &.active:focus {
+      background-color: darken($state-warning-bg, 5%);
+    }
+  }
+
+  &-danger {
+    &.active {
+      background-color: $state-danger-bg;
+    }
+    
+    &.active:hover,
+    &.active:focus {
+      background-color: darken($state-danger-bg, 5%);
+    }
+  }
+}
+
+.modal {
+  .close {
+    color: $text-color;
+  }
+}
+
+.popover {
+  color: $text-color;
 }
