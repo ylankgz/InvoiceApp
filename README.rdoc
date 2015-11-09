@@ -2,12 +2,10 @@
 
 Simple Invoices App built with Ruby on Rails and Jquery and deployed to AWS Elastic Beanstalk
 
-{Online Demo}[http://invoices-env-5kkumztpvp.elasticbeanstalk.com/]
-
 * {Part 1}[https://youtu.be/GkAo6c0J7G4/]
 * {Part 2}[https://youtu.be/7VMauQWFRxo]
 * {Part 3}[https://youtu.be/rWALua7YZE8]
 * {Part 4}[https://youtu.be/w0_7Vh4kaZ4]
 * {Part 5}[https://youtu.be/1BmyIDdPLs8]
-
+* {Part 6}[https://youtu.be/rc3Q_J8fva4]
 
