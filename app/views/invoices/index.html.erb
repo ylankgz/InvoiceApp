@@ -36,7 +36,7 @@
               <th>Contragent</th>
               <th>Amount</th>
               <th>Date</th>
-              <th colspan="3"></th>
+              <th colspan="1"></th>
             </tr>
           </thead>
 
@@ -48,8 +48,6 @@
                 <td><%= invoice.amount %> <%= invoice.currency %></td>
                 <td><%= invoice.date %></td>
                 <td><%= link_to 'Show', invoice %></td>
-                <td><%= link_to 'Edit', edit_invoice_path(invoice) %></td>
-                <td><%= link_to 'Destroy', invoice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
               </tr>
             <% end %>
           </tbody>
